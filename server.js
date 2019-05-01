@@ -3,10 +3,11 @@ const app = express();
 const bodyParser = require('body-parser');
 
 
+const todoController = require('./controller/index');
 
 
+app.use('/', todoController);
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static('public'));
 
 
 
