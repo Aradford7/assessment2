@@ -7,5 +7,11 @@ router.get('/', (req, res) => {
     res.render('index.ejs', {todo: ToDoList})
   });
 
+router.post('/', (req,res) => {
+  console.log(req.body, '<-form contents')
+  ToDoList.push(req.body);
+  console.log('todo did push in')
+  res.send(ToDoList);
+})
 
   module.exports=router;

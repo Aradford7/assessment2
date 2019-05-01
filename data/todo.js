@@ -1,6 +1,6 @@
 
 const ToDoList = [
-    { todo: String, done: Boolean },
+    { todo: String, done: Boolean, require:true },
 ]
 
 
